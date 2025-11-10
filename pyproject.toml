@@ -1,0 +1,10 @@
+[project]
+name = "typedconf"
+version = "0.1.0"
+description = "Small opinionated configuration manager for Python apps"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.12.4",
+    "pydantic-settings>=2.12.0",
+]
