@@ -6,8 +6,9 @@ import logging
 import os
 from typing import Any, ClassVar, List
 
-from typedconf.config import ConfigLoader, TomlFileLoader, load_sources
-from typedconf.schema import Config, ConfigDict, ConfigModel, Field
+from typedconf.config.core import ConfigLoader, load_sources
+from typedconf.config.formats import TomlFileLoader
+from typedconf.config.schema import Config, ConfigDict, ConfigModel, Field
 
 logger = logging.getLogger(__name__)
 
