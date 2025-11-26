@@ -4,17 +4,16 @@ from typing import Any, Dict, List, Optional
 import openai
 from openai.types.chat import ChatCompletion
 
-from typedconf.config.user_config import ModelConfig
+from typedconf.config.models import LanguageModelConfig
 from typedconf.core.core_interfaces import (
     ChatMessage,
     ChatResponse,
     LanguageModel,
-    MessageRole,
 )
 
 
 class OpenAILanguageModel(LanguageModel):
-    def __init__(self, model_config: ModelConfig, api_key: Optional[str] = None):
+    def __init__(self, model_config: LanguageModelConfig, api_key: Optional[str] = None):
         self.client = openai.Client(api_key=api_key)
         self.model_config = model_config
 

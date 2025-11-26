@@ -13,8 +13,8 @@ from typedconf.config.schema import Config, ConfigDict, ConfigModel, Field
 logger = logging.getLogger(__name__)
 
 
-class ModelConfig(ConfigModel):
-    """Example of a nested configuration model."""
+class LanguageModelConfig(ConfigModel):
+    """LLM model configuration. Provided as a convenience."""
     id: str = Field(..., description="The model Id, like gpt-3.5-turbo")
     top_p: float = 10
     max_tokens: int = 100
@@ -32,7 +32,7 @@ class AppConfig(Config):
 
     # --- Schema definition ---
     app_name: str = Field("MyCoolApp", description="Application Name")
-    model: ModelConfig
+    model: LanguageModelConfig
 
     # --- Pydantic model configuration ---
     model_config = ConfigDict(

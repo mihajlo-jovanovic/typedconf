@@ -1,14 +1,13 @@
 import pytest
 from unittest.mock import MagicMock, patch
-from typedconf.config.user_config import ModelConfig
-from typedconf.core.core_interfaces import ChatMessage, MessageRole
-from typedconf.core.openai_model import OpenAILanguageModel
+
+from typedconf import ChatMessage, LanguageModelConfig, MessageRole, OpenAILanguageModel
 
 
 @pytest.fixture
 def model_config():
     """Fixture for ModelConfig."""
-    return ModelConfig(
+    return LanguageModelConfig(
         id="gpt-3.5-turbo",
         top_p=10,
         max_tokens=100,

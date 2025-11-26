@@ -1,8 +1,7 @@
 import os
 from unittest.mock import MagicMock, patch
-from typedconf.config.user_config import ModelConfig
-from typedconf.core.core_interfaces import ChatMessage, MessageRole
-from typedconf.core.openai_model import OpenAILanguageModel
+
+from typedconf import ChatMessage, MessageRole, OpenAILanguageModel, LanguageModelConfig
 
 def test_openai_model():
     print("Testing OpenAILanguageModel...")
@@ -19,7 +18,7 @@ def test_openai_model():
         mock_instance.chat.completions.create.return_value = mock_completion
 
         # Create model config
-        model_config = ModelConfig(
+        model_config = LanguageModelConfig(
             id="gpt-3.5-turbo",
             top_p=0.1,
             max_tokens=100,

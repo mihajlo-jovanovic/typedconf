@@ -1,8 +1,6 @@
 import os
-from typedconf.config.user_config import ModelConfig
-from typedconf.core.core_interfaces import ChatMessage, MessageRole
-from typedconf.core.openai_model import OpenAILanguageModel
-from typedconf.config.user_config import AppConfig
+
+from typedconf import AppConfig, ChatMessage, MessageRole, OpenAILanguageModel
 
 def test_openai_real_endpoint():
     """

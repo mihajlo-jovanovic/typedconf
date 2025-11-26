@@ -2,8 +2,7 @@ import logging
 import os
 import pprint
 
-from typedconf.config.schema import ConfigModel, Field, ValidationError
-from typedconf.config.user_config import AppConfig
+from typedconf import AppConfig, ConfigModel, Field, ValidationError
 
 
 # 1. Configure logging to see debug messages from the typedconf framework
