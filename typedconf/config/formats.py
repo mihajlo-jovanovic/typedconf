@@ -4,7 +4,7 @@ Configuration file formats and loaders.
 import logging
 import types
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any, Mapping, Union
 
 from typedconf.config.core import ConfigLoader
 
@@ -29,7 +29,7 @@ class TomlFileLoader(ConfigLoader):
     Loads configuration from a TOML file.
     """
 
-    def __init__(self, file_path: Path | str, required: bool = False):
+    def __init__(self, file_path: Union[Path, str], required: bool = False):
         """
         Initializes the loader.
 
