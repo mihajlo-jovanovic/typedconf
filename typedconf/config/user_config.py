@@ -15,9 +15,10 @@ logger = logging.getLogger(__name__)
 
 class ModelConfig(ConfigModel):
     """Example of a nested configuration model."""
-
     id: str = Field(..., description="The model Id, like gpt-3.5-turbo")
-    top_p: int = 10
+    top_p: float = 10
+    max_tokens: int = 100
+    temperature: float = 0.7
 
 
 class AppConfig(Config):
