@@ -1,10 +1,5 @@
 app_name = "DefaultApp"
 
 [model]
-id = "my-model"
-
-[profile]
-name = "Default User"
-email = "user@example.com"
-role = "user"
+id = "gpt-3.5-turbo"
 
